@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% import "macros/macro.html" as macro %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../front/style/styles.css">
+    <title>{% block title %}Weerstation{% endblock %}</title>
+</head>
+<body>
+<main>
+    {% block header %}
+    <header>
+        <a href="index.html" id="logo"></a>
+        <nav>
+            <ul>
+                {{ macro.nav_link("/","Home") }}
+                {{ macro.nav_link("realtime","Realtime") }}
+{#                {{ macro.nav_link("geschiedenis","Geschiedenis") }}#}
+            </ul>
+        </nav>
+	</header>
+    {% endblock %}
+
+    {% block footer %}
+
+        <footer class="footer-distributed">
+			<div class="footer-left">
+				<p class="footer-links">
+					{{ macro.footer("/","Home") }}
+                    {{ macro.footer("realtime","Realtime") }}
+				</p>
+				<p>Cedric &copy; 2019</p>
+			</div>
+	</footer>
+    {% endblock %}
+</main>
+</body>
+
+
+</html>

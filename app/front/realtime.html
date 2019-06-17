@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block header %}
+    {{ super() }}
+<section>
+<h1>Responsive Table </h1>
+
+		<table>
+			<thead>
+			    <tr>
+			      <th>Temperatuur</th>
+			      <th>Luchtvochtigheid</th>
+			      <th>Luchtdruk</th>
+			      <th>Regensensor</th>
+			    </tr>
+			</thead>
+			<tbody>
+			    <tr>
+			      <td>{{ temperatuur }}</td>
+			      <td>{{ luchtvochtigheid }}</td>
+			      <td>{{ luchtdruk }}</td>
+			      <td>{{ regen }}</td>
+			    </tr>
+
+			</tbody>
+		</table>
+
+</section>
+{% endblock %}
